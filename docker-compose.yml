@@ -10,6 +10,10 @@ services:
       - ./app:/app
     links:
       - dnmonster
+      - redis
 
   dnmonster:
     image: amouat/dnmonster:1.0
+
+  redis:
+    image: redis:7.2.1
