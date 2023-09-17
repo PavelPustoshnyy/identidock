@@ -1,7 +1,7 @@
 FROM python:3.8
 
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
-RUN pip install Flask==2.3.3 uWSGI==2.0.15
+RUN pip install Flask==2.3.3 uWSGI==2.0.15 requests==2.5.1
 WORKDIR /app
 COPY app /app
 COPY cmd.sh /
